@@ -1,10 +1,12 @@
-package choreography.with.idempotency.domain;
+package choreographywithidempotency.domain;
 
-import choreography.with.idempotency.domain.*;
-import choreography.with.idempotency.infra.AbstractEvent;
+import choreographywithidempotency.domain.*;
+import choreographywithidempotency.infra.AbstractEvent;
+import java.time.LocalDate;
 import java.util.*;
 import lombok.*;
 
+//<<< DDD / Domain Event
 @Data
 @ToString
 public class OrderApproved extends AbstractEvent {
@@ -17,10 +19,12 @@ public class OrderApproved extends AbstractEvent {
     private Integer qty;
     private String address;
 
-    public OrderApproved(Order aggregate){
+    public OrderApproved(Order aggregate) {
         super(aggregate);
     }
-    public OrderApproved(){
+
+    public OrderApproved() {
         super();
     }
 }
+//>>> DDD / Domain Event
